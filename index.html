@@ -66,7 +66,7 @@
   .hero-stats b{display:block;font-family:"IBM Plex Mono",monospace;font-size:20px;line-height:1.2;color:var(--ink)}
   .hero-stats span{font-size:12.5px;color:var(--ink3)}
   .hero figure{margin:0}
-  .hero figure img{border-radius:14px;aspect-ratio:3/2;object-fit:cover;width:100%}
+  .hero figure img,.hero figure svg.hero-art{border-radius:14px;aspect-ratio:3/2;object-fit:cover;width:100%;height:auto;display:block}
   .hero figcaption{font-size:12.5px;color:var(--ink3);margin-top:8px}
 
   /* ---------- section scaffolding ---------- */
@@ -217,7 +217,106 @@
       </div>
     </div>
     <figure>
-      <img src="assets/hero.webp" alt="示意图：血液中长短不一的 cfDNA 片段，其中少数高亮片段代表肿瘤来源信号" />
+      <svg class="hero-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="示意图：血管横截面内的 cfDNA 片段，少数高亮片段代表肿瘤来源信号">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f4b64e" stop-opacity="0.55"/>
+            <stop offset="60%" stop-color="#f4b64e" stop-opacity="0.22"/>
+            <stop offset="100%" stop-color="#f4b64e" stop-opacity="0"/>
+          </radialGradient>
+          <g id="helix">
+            <path d="M2,22 C18,2 34,2 60,22 C86,42 102,42 118,22" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            <path d="M2,22 C18,42 34,42 60,22 C86,2 102,2 118,22" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            <g stroke="currentColor" stroke-width="3.4" stroke-linecap="round">
+              <line x1="15" y1="13" x2="15" y2="31"/>
+              <line x1="31" y1="9" x2="31" y2="35"/>
+              <line x1="46" y1="15" x2="46" y2="29"/>
+              <line x1="74" y1="15" x2="74" y2="29"/>
+              <line x1="89" y1="9" x2="89" y2="35"/>
+              <line x1="105" y1="13" x2="105" y2="31"/>
+            </g>
+          </g>
+        </defs>
+      
+        <!-- paper background -->
+        <rect width="1200" height="800" fill="#f7f2e8"/>
+      
+        <!-- ======== vessel cross-section ======== -->
+        <ellipse cx="600" cy="348" rx="398" ry="302" fill="#0a2a36"/>
+        <ellipse cx="600" cy="348" rx="374" ry="279" fill="#14616f"/>
+        <ellipse cx="600" cy="348" rx="374" ry="279" fill="none" stroke="#0c3d4f" stroke-width="36" stroke-dasharray="88 30" opacity="0.55"/>
+        <ellipse cx="600" cy="348" rx="374" ry="279" fill="none" stroke="#1d7f8f" stroke-width="9" stroke-dasharray="42 96" stroke-dashoffset="58" opacity="0.5"/>
+        <!-- endothelial nuclei on the vessel wall -->
+        <g fill="#2f93a1" opacity="0.85">
+          <ellipse cx="600" cy="76" rx="17" ry="9"/>
+          <ellipse cx="352" cy="118" rx="16" ry="8.5" transform="rotate(-38 352 118)"/>
+          <ellipse cx="852" cy="118" rx="16" ry="8.5" transform="rotate(38 852 118)"/>
+          <ellipse cx="238" cy="348" rx="9" ry="17"/>
+          <ellipse cx="966" cy="348" rx="9" ry="17"/>
+          <ellipse cx="352" cy="578" rx="16" ry="8.5" transform="rotate(38 352 578)"/>
+          <ellipse cx="852" cy="578" rx="16" ry="8.5" transform="rotate(-38 852 578)"/>
+          <ellipse cx="600" cy="620" rx="17" ry="9"/>
+        </g>
+      
+        <!-- lumen -->
+        <path d="M348,222 C420,128 552,104 678,128 C798,151 888,228 884,330 C880,438 792,540 662,566 C532,592 402,562 348,472 C298,388 292,306 348,222 Z" fill="#cfe0d8" opacity="0.65" transform="translate(-14,-12)"/>
+        <path d="M348,222 C420,128 552,104 678,128 C798,151 888,228 884,330 C880,438 792,540 662,566 C532,592 402,562 348,472 C298,388 292,306 348,222 Z" fill="#f4f0e5"/>
+      
+        <!-- nucleosome bead chains -->
+        <path d="M332,332 C450,262 522,420 652,380 C758,348 800,300 868,292" fill="none" stroke="#7aa79f" stroke-width="10" stroke-linecap="round" stroke-dasharray="0.1 17"/>
+        <path d="M348,432 C480,402 542,522 662,506 C768,492 818,432 872,470" fill="none" stroke="#14616f" stroke-width="10" stroke-linecap="round" stroke-dasharray="0.1 17" opacity="0.8"/>
+      
+        <!-- ======== cfDNA fragments (teal = background / healthy) ======== -->
+        <g>
+          <use href="#helix" transform="translate(392,208) rotate(-32) scale(1.15)" color="#69a398"/>
+          <use href="#helix" transform="translate(556,158) rotate(-48) scale(0.8)" color="#7fb3aa"/>
+          <use href="#helix" transform="translate(622,208) rotate(-38) scale(1.3)" color="#69a398"/>
+          <use href="#helix" transform="translate(452,318) rotate(76) scale(1.0)" color="#7fb3aa"/>
+          <use href="#helix" transform="translate(500,282) rotate(-30) scale(0.62)" color="#173f4d"/>
+          <use href="#helix" transform="translate(428,462) rotate(28) scale(0.85)" color="#7fb3aa"/>
+          <use href="#helix" transform="translate(672,462) rotate(-18) scale(0.85)" color="#7fb3aa"/>
+          <use href="#helix" transform="translate(694,326) rotate(-24) scale(0.6)" color="#93beb4"/>
+          <use href="#helix" transform="translate(676,392) rotate(14) scale(0.62)" color="#93beb4"/>
+          <use href="#helix" transform="translate(560,368) rotate(-52) scale(0.55)" color="#93beb4"/>
+        </g>
+      
+        <!-- ======== tumour-derived fragments (amber, highlighted) ======== -->
+        <g>
+          <ellipse cx="838" cy="200" rx="86" ry="52" fill="url(#glow)"/>
+          <ellipse cx="862" cy="318" rx="118" ry="66" fill="url(#glow)"/>
+          <ellipse cx="896" cy="404" rx="82" ry="48" fill="url(#glow)"/>
+          <ellipse cx="792" cy="452" rx="76" ry="52" fill="url(#glow)"/>
+          <use href="#helix" transform="translate(786,182) rotate(-18) scale(0.62)" color="#e09a2e"/>
+          <use href="#helix" transform="translate(788,292) rotate(-8) scale(1.08)" color="#d98a1d"/>
+          <use href="#helix" transform="translate(842,384) rotate(-16) scale(0.7)" color="#e09a2e"/>
+          <use href="#helix" transform="translate(764,428) rotate(52) scale(0.72)" color="#d98a1d"/>
+          <use href="#helix" transform="translate(792,246) rotate(-12) scale(0.6)" color="#93beb4"/>
+        </g>
+      
+        <!-- ======== sequencing tracks ======== -->
+        <g>
+          <!-- row 1 -->
+          <line x1="30" y1="724" x2="1170" y2="724" stroke="#33565e" stroke-width="1.6"/>
+          <path d="M30,724 L46,724 L55,708 L64,724 L84,724 L93,700 L102,724 L126,724 L135,712 L146,724 L172,724 L181,704 L192,724 L218,724 L227,714 L238,724 L264,724 L274,708 L284,724 L310,724 L320,716 L330,724 L356,724" fill="none" stroke="#69a398" stroke-width="2.4"/>
+          <path d="M386,724 L400,724 L408,706 L416,724 L440,724 L449,698 L458,724 L484,724 L492,710 L502,724 L528,724 L537,702 L546,724 L572,724 L580,712 L590,724 L616,724 L625,706 L634,724 L660,724 L668,714 L678,724 L706,724" fill="none" stroke="#e0a13a" stroke-width="2.4"/>
+          <line x1="756" y1="724" x2="1170" y2="724" stroke="#17485a" stroke-width="13" stroke-dasharray="3 4"/>
+          <line x1="1092" y1="724" x2="1170" y2="724" stroke="#e0a13a" stroke-width="13" stroke-dasharray="3 4"/>
+          <!-- row 2 -->
+          <line x1="30" y1="754" x2="1170" y2="754" stroke="#33565e" stroke-width="1.6"/>
+          <path d="M30,754 L48,754 L57,742 L66,754 L90,754 L99,736 L108,754 L132,754 L141,744 L152,754 L178,754 L187,738 L196,754 L222,754 L231,746 L242,754 L268,754 L277,740 L286,754 L312,754 L321,746 L332,754 L356,754" fill="none" stroke="#69a398" stroke-width="2.4"/>
+          <path d="M386,754 L402,754 L410,740 L419,754 L444,754 L452,732 L461,754 L486,754 L495,742 L505,754 L530,754 L539,736 L548,754 L574,754 L582,744 L592,754 L618,754 L626,740 L636,754 L662,754 L670,746 L680,754 L706,754" fill="none" stroke="#e0a13a" stroke-width="2.4"/>
+          <line x1="756" y1="754" x2="1170" y2="754" stroke="#17485a" stroke-width="13" stroke-dasharray="3 4"/>
+          <line x1="946" y1="754" x2="1006" y2="754" stroke="#e0a13a" stroke-width="13" stroke-dasharray="3 4"/>
+          <line x1="1084" y1="754" x2="1170" y2="754" stroke="#e0a13a" stroke-width="13" stroke-dasharray="3 4"/>
+          <!-- row 3 -->
+          <line x1="30" y1="784" x2="1170" y2="784" stroke="#33565e" stroke-width="1.6"/>
+          <path d="M30,784 L44,784 L52,774 L60,784 L82,784 L90,768 L98,784 L120,784 L128,776 L138,784 L160,784 L169,770 L178,784 L202,784 L210,776 L220,784 L244,784 L252,772 L261,784 L284,784 L292,776 L302,784 L356,784" fill="none" stroke="#69a398" stroke-width="2.4"/>
+          <path d="M386,784 L398,784 L406,770 L414,784 L438,784 L446,766 L455,784 L480,784 L488,774 L498,784 L524,784 L532,768 L541,784 L566,784 L575,776 L585,784 L610,784 L619,770 L628,784 L654,784 L662,776 L672,784 L706,784" fill="none" stroke="#e0a13a" stroke-width="2.4"/>
+          <line x1="756" y1="784" x2="1170" y2="784" stroke="#e0a13a" stroke-width="13" stroke-dasharray="3 4"/>
+          <line x1="756" y1="784" x2="900" y2="784" stroke="#17485a" stroke-width="13" stroke-dasharray="3 4"/>
+          <line x1="986" y1="784" x2="1062" y2="784" stroke="#17485a" stroke-width="13" stroke-dasharray="3 4"/>
+        </g>
+      </svg>
       <figcaption>血浆 cfDNA 示意图（本站配图）：健康细胞与肿瘤细胞释放的 DNA 片段在长度、末端与甲基化上留下不同印记。</figcaption>
     </figure>
   </div>
