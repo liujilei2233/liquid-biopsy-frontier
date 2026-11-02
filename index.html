@@ -203,17 +203,17 @@
   <div class="hero">
     <div>
       <div class="issue-line">
-        <span class="no">创刊号</span>
+        <span class="no">第 2 期</span>
         <span>2026 年 11 月 2 日 · 星期一</span>
-        <span>创刊特辑：最新进展 + 近一年里程碑回顾</span>
+        <span>覆盖 2026 年 10 月 26 日 – 11 月 1 日新发表或新公开的工作</span>
       </div>
-      <h1>当甲基化遇上片段组学：<em>一次抽血，读出两种语言</em></h1>
-      <p class="lede">本期头条是发表于 <i>Genome Medicine</i> 的 FAME 研究——它系统回答了一个被忽视的方法学问题：甲基化建库会不会破坏 cfDNA 的片段组学信号？与此同时，14.2 万人的 NHS-Galleri 随机对照试验给出阴性主要终点，提醒整个领域：能「检出」癌症，不等于能「改变」结局。本站按每周一的节奏更新，每项工作按方法、样本与验证设计、关键结果、相对增量与风险五段拆解。本创刊号除最新发表的 FAME 外，特别收录过去一年多项改变领域判断的里程碑研究，便于一次建立参照系。</p>
+      <h1>从「能检出」走向「测得准」：<em>校正偏倚、编码读段、重标核小体</em></h1>
+      <p class="lede">本期头条是 <i>Nature Methods</i> 的 JEEPERS：它揭示并校正了 cfDNA 甲基化分析中一个系统性测量偏倚——末端修复造成的 3′ 端「锯齿」，直接关系到既往甲基化数据的可信度。同周，ctDNA-BERT 用异种移植监督训练出可复用的读段评分层，MAPs 把核小体定位推进到组蛋白修饰维度；另有 4,662 例多癌种超深测序验证、食管癌甲基化 PCR 多中心验证与 Abbott 新一代 MRD 检测上市。本站按每周一的节奏更新，每项工作按方法、样本与验证设计、关键结果、相对增量与风险五段拆解。</p>
       <div class="hero-stats">
-        <div><b>8 项</b><span>本期精选（宁缺毋滥）</span></div>
+        <div><b>6 项</b><span>本期精选（宁缺毋滥）</span></div>
         <div><b>3 项</b><span>最优先精读</span></div>
-        <div><b>142,000</b><span>本期最大样本量研究</span></div>
-        <div><b>99.6%</b><span>PATHFINDER 2 特异性</span></div>
+        <div><b>4,662</b><span>本期最大样本量（多癌种验证队列）</span></div>
+        <div><b>0.884</b><span>ctDNA-BERT 的 I 期 AUROC</span></div>
       </div>
     </div>
     <figure>
@@ -328,222 +328,173 @@
       <h2>本期精选 · 前沿进展</h2>
       <p>同行评议论文、预印本与权威机构报告；每项区分「作者报告」与「本站判断」</p>
     </div>
-    <p class="sec-intro">筛选标准：聚焦 cfDNA 液体活检、泛癌早筛（MCED）与组织溯源（TOO），优先 fragmentomics、end-motif、低深度全基因组测序与多模态融合方向的一手来源。点开任意一项的「五段拆解」可看完整评述。<b>创刊号说明：</b>本期为回顾特辑，除 2026 年 10 月发表的 FAME 外，亦收录过去一年多项里程碑工作（各条目均标注发表时间）；自下期起以近一周新发表或新公开的工作为主，最多 8 项，宁缺毋滥。</p>
+    <p class="sec-intro">筛选标准：聚焦 cfDNA 液体活检、泛癌早筛（MCED）与组织溯源（TOO），优先一手来源。点开任意一项的「五段拆解」可看完整评述。<b>本期说明：</b>本期共 6 项，未满 8 项，宁缺毋滥。另有 1 篇临床转化综述（Cui 等，<i>Frontiers in Oncology</i>，2026-10-26）列入延伸阅读，不计入精选。<b>窗口外值得留意（不计入本期）：</b>NHS-Galleri 试验的「溢出效应」JAMA 研究（约 2026-10-23）——准实验分析发现，试验地区首年常规癌症诊断延迟短暂上升后回落，提示未来人群筛查须预留诊疗容量。</p>
 
     <div class="filters" role="group" aria-label="按主题筛选">
-      <button class="chip" data-filter="all" aria-pressed="true">全部 8 项</button>
-      <button class="chip" data-filter="frag" aria-pressed="false">片段组学</button>
+      <button class="chip" data-filter="all" aria-pressed="true">全部 6 项</button>
       <button class="chip" data-filter="meth" aria-pressed="false">甲基化 / 多模态</button>
+      <button class="chip" data-filter="frag" aria-pressed="false">片段组学与核小体</button>
       <button class="chip" data-filter="clinic" aria-pressed="false">临床验证</button>
-      <button class="chip" data-filter="rna" aria-pressed="false">cfRNA 与新分析物</button>
+      <button class="chip" data-filter="mrd" aria-pressed="false">MRD 与产业动态</button>
     </div>
-    <p class="filter-note" id="filterNote">显示全部 8 项。</p>
+    <p class="filter-note" id="filterNote">显示全部 6 项。</p>
 
-    <!-- 1 FAME -->
-    <article class="paper" data-tags="frag meth">
-      <div class="meta"><span class="tag">片段组学</span><span class="tag">甲基化 / 多模态</span><span>Genome Medicine · 2026 年 10 月 15 日</span><span>同行评议</span></div>
-      <h3>FAME：甲基化与片段组学是「耦合」的，一次甲基化测序可以读出两种信号
-        <span class="en">Decoding coupled epigenetic-fragmentomic signals in circulating cell-free DNA for interpretable cancer diagnosis — Wang, Hou, Liu et al.</span></h3>
-      <p class="one-liner">先回答方法学问题——WGBS 与 EM-seq 建库对片段长度、末端基序等经典片段组学特征只是「部分保留」且逐特征不同；再据此构建可解释的堆叠集成模型 FAME 及全基因组增强版 FAME-GW，用于癌症检出与组织溯源。</p>
+    <!-- 1 JEEPERS -->
+    <article class="paper" data-tags="meth">
+      <div class="meta"><span class="tag">甲基化 / 多模态</span><span>Nature Methods · 2026 年 10 月 29 日在线</span><span>同行评议</span></div>
+      <h3>JEEPERS：校正 cfDNA 甲基化分析中的「锯齿末端」偏倚
+        <span class="en">JEEPERS · Nature Methods, 2026</span></h3>
+      <p class="one-liner">末端修复时掺入的未甲基化胞嘧啶，会让 cfDNA 片段 3′ 端出现人为的低甲基化「锯齿」；JEEPERS 以配对链或同位点片段为参照，逐分子检测并校正这一偏倚——约 58% 的双链分子至少一条链受影响。</p>
       <div class="kpi-row">
-        <div class="kpi"><b>2 种</b><span>甲基化建库方案与 WGS 系统对照</span></div>
-        <div class="kpi"><b>MHB</b><span>以甲基化单倍型块为中心的特征组织方式</span></div>
-        <div class="kpi"><b>3 个</b><span>对标方法：THEMIS、SPOT-MAS、DELFI</span></div>
+        <div class="kpi"><b>58%</b><span>cfDNA 双链分子至少一条链受锯齿影响</span></div>
+        <div class="kpi"><b>≈74 bp</b><span>平均锯齿长度</span></div>
+        <div class="kpi"><b>9×</b><span>EM-seq 深度即可把 R1–R2 甲基化差异降至 5% 以下</span></div>
+        <div class="kpi"><b>≈95%</b><span>in silico spike-in 检查点 CpG 校正准确率</span></div>
       </div>
       <details>
         <summary>五段拆解</summary>
         <div class="breakdown">
-          <div><h4>① 核心方法</h4><p>系统比较全基因组亚硫酸氢盐测序（WGBS）与酶法甲基化测序（EM-seq）相对常规 WGS 对片段组学信号的保留程度；在甲基化单倍型块（MHB）区域内联合建模甲基化与片段特征，构建可解释的堆叠集成 FAME，并扩展出纳入全基因组特征的 FAME-GW。</p></div>
-          <div><h4>② 样本与验证设计</h4><p>基于既有公开 cfDNA 甲基化测序队列做交叉验证与独立验证，并与 THEMIS、SPOT-MAS、DELFI 三个代表性方法同台比较（作者报告）。具体癌种构成与样本量请以原文表格为准。</p></div>
-          <div><h4>③ 关键结果</h4><p>作者报告：经典片段特征在甲基化建库后部分保留、保留程度因特征而异；MHB 区域内甲基化与片段信号呈「协同且互补」格局——甲基化指向组织来源，片段模式反映 DNA 的加工与清除方式。FAME 保持紧凑可解释，FAME-GW 整体预测性能最强。</p></div>
-          <div><h4>④ 相对增量</h4><p>以往多模态工作多是「拼接特征」，本文先量化建库化学对信号的损伤、再按生物学耦合关系组织特征，为「一份血浆、一次甲基化测序、双读数」的检测设计提供了直接证据与注意事项清单。</p></div>
-          <div><h4>⑤ 最值得借鉴</h4><p>特征级「保真度审计」的思路：任何想从甲基化文库里复用片段组学特征的团队，都应先逐特征验证其在自家协议下是否存活，而不是默认成立。</p></div>
-          <div class="risk"><h4>风险提示（本站判断）</h4><p>主要基于回顾性公开数据的再分析，队列间批次与建库差异可能同时影响甲基化和片段特征，存在批次效应与队列构成带来的乐观偏差；尚无前瞻性、跨平台验证，性能数字不宜直接外推到筛查人群。</p></div>
+          <div><h4>① 核心方法</h4><p>检测并校正末端修复时掺入的未甲基化胞嘧啶造成的 3′ 端人为低甲基化：双链模式以配对链 5′ 端作分子内参照，无配对时用同位点 sibling 片段参照，并以 3′ 端最后一个甲基化 CpG 为检查点判定锯齿边界。</p></div>
+          <div><h4>② 样本与验证设计</h4><p>3 名健康成人的 EM-seq 靶向捕获文库做深度梯度实验；in silico spike-in 验证校正准确率；58 例 NSCLC cfDNA 检测锯齿指标 AUJCR 与分期的关系；1 例转移性 LUAD 患者纵向 10 份样本，并与 CAPP-seq 的 SNV 结果对照。</p></div>
+          <div><h4>③ 关键结果</h4><p>作者报告：约 58% 的 cfDNA 双链分子至少一条链受锯齿影响，平均锯齿长度约 74 bp。约 9× 深度即可把 R1–R2 甲基化差异降到 5% 以下，60× 时几乎不可见；检查点 CpG 校正准确率约 95%。58 例 NSCLC 中 AUJCR 随分期上升（P=5.56×10⁻⁹）；纵向样本中 cMethAF 在 95% 特异性 cutoff 下检出全部肿瘤样本，EM-seq 与 CAPP-seq 的 SNV 等位基因分数相关 R&gt;0.98。</p></div>
+          <div><h4>④ 相对增量</h4><p>把一个长期被当作真实低甲基化、或靠粗放截断处理的建库伪影，变成可逐分子量化（JCR / AUJCR）并校正的变量。特别要紧的是：固定截掉 3′ 端 10–30 bp 并不能消除这一偏倚。</p></div>
+          <div><h4>⑤ 最值得借鉴</h4><p>任何 EM-seq / WGBS cfDNA 甲基化管线应先算 M-bias / JCR 再谈下游结论；9–10× 是校正起效的实用深度下限，低于此深度的甲基化差异解读需格外谨慎。</p></div>
+          <div class="risk"><h4>风险提示（作者自述）</h4><p>目前只在 CpG 位点检测锯齿，有效校正需 &gt;10× 深度；这是测量保真度工具，不是替代肿瘤知情突变 MRD 检测——它保证的是「测得准」，不直接回答「检没检出肿瘤」。</p></div>
         </div>
       </details>
-      <p class="src">来源：<a href="https://link.springer.com/article/10.1186/s13073-026-01793-w" target="_blank" rel="noopener">Genome Medicine 原文（Springer Nature）</a></p>
+      <p class="src">来源：<a href="https://doi.org/10.1038/s41592-026-03278-5" target="_blank" rel="noopener">Nature Methods 原文（DOI 10.1038/s41592-026-03278-5）</a></p>
     </article>
 
-    <!-- 2 NHS-Galleri -->
-    <article class="paper" data-tags="clinic meth">
-      <div class="meta"><span class="tag">临床验证</span><span class="tag warn">主要终点未达</span><span>NHS-Galleri 随机对照试验 · 2026 年 2 月公布，ASCO 2026 报告数据</span><span>权威机构 / 会议报告</span></div>
-      <h3>NHS-Galleri：14.2 万人随机试验未达主要终点，MCED 迎来「临床效用」大考
-        <span class="en">NHS-Galleri: primary results from a randomised controlled trial of a multi-cancer early detection test</span></h3>
-      <p class="one-liner">这是 MCED 领域第一个、也是迄今唯一以人群结局为终点的随机对照试验：Galleri 甲基化检测加入标准 care 后，未能显著降低 12 种预设高致死癌症的 III/IV 期合计发病；但 IV 期癌症随逐年筛查呈下降趋势。</p>
+    <!-- 2 ctDNA-BERT -->
+    <article class="paper" data-tags="meth frag">
+      <div class="meta"><span class="tag">甲基化 / 多模态</span><span class="tag">片段组学与核小体</span><span class="tag warn">预印本 · 未同行评议</span><span>bioRxiv · 2026 年 10 月 26 日上线</span></div>
+      <h3>ctDNA-BERT：用异种移植监督训练出的可复用「读段评分层」
+        <span class="en">ctDNA-BERT · bioRxiv preprint, 2026</span></h3>
+      <p class="one-liner">Transformer 对单条亚硫酸氢盐测序读段打分——联合编码 CpG 甲基化状态、序列上下文与片段 3′ 末端 6-mer；监督信号来自异种移植的双基因组比对。评分器冻结后可跨队列复用，I 期癌症 vs 健康对照 AUROC 0.884。</p>
       <div class="kpi-row">
-        <div class="kpi"><b>142,000</b><span>受试者，50–77 岁，无症状</span></div>
-        <div class="kpi"><b>IRR 1.03</b><span>12 癌种 III/IV 期合计，95%CI 0.92–1.14，p=0.6324</span></div>
-        <div class="kpi"><b>−22% / −26%</b><span>第 2、3 轮筛查中 IV 期诊断降幅（12 癌种）</span></div>
-        <div class="kpi"><b>−14%</b><span>IV 期癌症总体降幅，IRR 0.86（0.744–0.998）</span></div>
+        <div class="kpi"><b>1,477 例</b><span>回顾性队列：730 例 I 期癌症 + 747 例健康对照</span></div>
+        <div class="kpi"><b>0.884</b><span>I 期 vs 健康 out-of-fold AUROC（不过滤读段仅 0.713）</span></div>
+        <div class="kpi"><b>40.1%–71.8%</b><span>灵敏度区间（特异性 99.1% → 90.1%）</span></div>
+        <div class="kpi"><b>0.99</b><span>肝癌组织溯源 one-vs-rest AUC（五癌种最高）</span></div>
       </div>
       <details>
         <summary>五段拆解</summary>
         <div class="breakdown">
-          <div><h4>① 核心方法</h4><p>干预组在标准 NHS 医疗之外接受最多 3 轮、约间隔 12 个月的 Galleri 靶向甲基化 MCED 检测，阳性者进入诊断路径；对照组为标准 care。主要终点为预设 12 种高致死癌症 III/IV 期合计发病率的下降。</p></div>
-          <div><h4>② 样本与验证设计</h4><p>英格兰 142,000 名 50–77 岁无症状成人随机分组，随访约 3 年。这是前瞻性、随机、对照设计，证据等级高于此前所有病例-对照与单臂前瞻研究。</p></div>
-          <div><h4>③ 关键结果</h4><p>作者 / 申办方报告：主要终点未达（IRR 1.03，p=0.6324）；IV 期癌症总体下降 14%，且在第 2、3 轮筛查中 12 癌种 IV 期降幅分别达 22% 与 26%，提示效应可能随重复筛查累积、并被首轮「现患筛查」稀释。</p></div>
-          <div><h4>④ 相对增量</h4><p>第一次用随机对照证据回答「分期迁移」而非「能否检出」：它把 MCED 的评价标准从灵敏度 / PPV 拉回到人群结局，也为后续试验的终点选择（IV 期单列、延长随访）提供了参照。</p></div>
-          <div><h4>⑤ 最值得借鉴</h4><p>终点设计的教训：把 III 期与 IV 期合并，可能掩盖对 IV 期的真实效应；预设亚组与逐轮分析的解读边界，值得任何做筛查试验设计的人细读。</p></div>
-          <div class="risk"><h4>风险提示（本站判断）</h4><p>目前完整同行评议论文尚未刊出，数字来自申办方公布与会议材料，解读需保留；「IV 期下降」为次要 / 趋势性结果，不能替代主要终点；尚无癌症死亡率证据。GRAIL 已计划延长随访 6–12 个月。</p></div>
+          <div><h4>① 核心方法</h4><p>Transformer 对单条亚硫酸氢盐测序读段打分，不预设差异甲基化区域，联合编码 CpG 甲基化状态、核苷酸序列上下文与片段 3′ 末端 6-mer；异种移植双基因组比对提供分子水平的肿瘤监督信号；读段评分层冻结后可复用，样本级推断与之解耦，无需针对新队列重新训练。</p></div>
+          <div><h4>② 样本与验证设计</h4><p>回顾性队列 1,477 例：730 例 I 期癌症（乳腺 60、结直肠 93、肝 75、肺 286、甲状腺 216）+ 747 例健康对照；五折分层交叉验证，折内 ANOVA 选 2,000 个变量，类别平衡 RBF 支持向量机做样本级分类。</p></div>
+          <div><h4>③ 关键结果</h4><p>作者报告：I 期癌症 vs 健康对照 out-of-fold AUROC 0.884（95% CI 0.867–0.900），而不过滤读段时仅 0.713；灵敏度 40.1%（特异性 99.1% 时）至 71.8%（特异性 90.1% 时）。组织溯源 one-vs-rest AUC：乳腺 0.94、结直肠 0.91、肝 0.99、肺 0.80、甲状腺 0.85，召回率分别为 70%、61%、91%、64%、64%，肺癌与甲状腺癌互混最明显。</p></div>
+          <div><h4>④ 相对增量</h4><p>把特征工程前移到读段级：分子级监督 + 冻结可复用的评分层，使新队列不必重训表征模型；同时定量证明「读段过滤」本身就是 I 期检出的关键增量来源（AUROC 0.713 → 0.884）。</p></div>
+          <div><h4>⑤ 最值得借鉴</h4><p>读段级评分与样本级推断解耦的架构，以及用异种移植制造分子级标签的监督策略——在真实人体血浆缺乏分子级真值时，这是一条可行的造标签路径。</p></div>
+          <div class="risk"><h4>风险提示（本站判断）</h4><p>回顾性病例-对照设计，无良性 / 炎症对照；异种移植的片段化背景与真实人体血浆存在系统性差异；尚无前瞻性与跨平台验证；队列中肺癌与甲状腺癌占 502/730，整体表现向这两类倾斜。预印本，数字待同行评议确认。</p></div>
         </div>
       </details>
-      <p class="src">来源：<a href="https://mmx.prnewswire.com/media/2991283/NHS_Galleri_Fact_Sheet.pdf" target="_blank" rel="noopener">NHS-Galleri 试验数据表（ASCO 2026，PDF）</a> · <a href="https://www.mddionline.com/medical-device-markets/trouble-continues-for-grail-as-stock-falls-after-cancer-blood-test-trial-fails-to-meet-endpoint" target="_blank" rel="noopener">MD+DI 报道（2026 年 2 月）</a></p>
+      <p class="src">来源：<a href="https://www.biorxiv.org/content/10.64898/2026.10.26.761533v1" target="_blank" rel="noopener">bioRxiv 预印本全文</a></p>
     </article>
 
-    <!-- 3 PATHFINDER 2 -->
-    <article class="paper" data-tags="clinic meth">
-      <div class="meta"><span class="tag">临床验证</span><span class="tag">甲基化 / 多模态</span><span>PATHFINDER 2 · ESMO 2025（2025 年 10 月）</span><span>注册性前瞻研究</span></div>
-      <h3>PATHFINDER 2：无症状人群中 PPV 61.6%，信号来源预测准确率 92%
-        <span class="en">Safety and performance of an MCED test in an intended-use population: registrational PATHFINDER 2 study</span></h3>
-      <p class="one-liner">在美国与加拿大 35,878 名 50 岁以上、无癌症临床怀疑的人群中，Galleri 叠加标准筛查使癌症检出增加 7 倍以上；与第一代 PATHFINDER 相比，阳性预测值从约 43% 提升到 61.6%。</p>
-      <div class="kpi-row">
-        <div class="kpi"><b>35,878</b><span>入组；25,578 人完成 ≥12 个月随访并纳入分析</span></div>
-        <div class="kpi"><b>61.6%</b><span>阳性预测值（216 例信号检出，133 例确诊癌症）</span></div>
-        <div class="kpi"><b>99.6%</b><span>特异性（假阳性率 0.4%）</span></div>
-        <div class="kpi"><b>92%</b><span>癌症信号来源（CSO）预测准确率</span></div>
-        <div class="kpi"><b>53.5%</b><span>新检出癌症中 I/II 期占比</span></div>
-      </div>
-      <details>
-        <summary>五段拆解</summary>
-        <div class="breakdown">
-          <div><h4>① 核心方法</h4><p>单臂前瞻干预研究：受试者在标准筛查之外接受 Galleri 靶向甲基化 MCED 检测，阳性者按 CSO 预测引导诊断检查，12 个月随访确认结局。</p></div>
-          <div><h4>② 样本与验证设计</h4><p>意向使用人群（无症状、无临床怀疑）的前瞻性验证，是 FDA 注册路径的一部分；73.7% 的「episode sensitivity」针对 12 种最致死癌症计算。</p></div>
-          <div><h4>③ 关键结果</h4><p>申办方报告：信号检出率 0.93%；对随访期内全部癌症的检出敏感度约 40.4%，对 12 种最致死癌症为 73.7%；叠加标准筛查后总检出增加 7 倍以上，约 75% 被检出癌症尚无标准筛查手段。</p></div>
-          <div><h4>④ 相对增量</h4><p>相对 PATHFINDER（2023 年发表于 <i>The Lancet</i>），PPV 显著提升且 CSO 准确率保持 92%，说明检测版本与诊断路径的迭代能实质改善阳性者的下游负担。</p></div>
-          <div><h4>⑤ 最值得借鉴</h4><p>「检出后路径」的设计与报告方式：从信号阳性到确诊的完整漏斗（检出率、确诊率、PPV、分期构成）是评价任何 MCED 落地研究时应索取的最小数据集。</p></div>
-          <div class="risk"><h4>风险提示（本站判断）</h4><p>单臂设计、无随机对照，无法回答死亡率问题；I 期癌症敏感度仍低（既往 CCGA 数据中 I 期检出有限）；PPV 高度依赖人群患病率，外推到更低风险人群时会下降。数据目前主要来自会议报告与申办方发布。</p></div>
-        </div>
-      </details>
-      <p class="src">来源：<a href="https://www.biospace.com/press-releases/grail-to-present-new-galleri-data-from-more-than-32-000-participants-across-the-pathfinder-2-symplify-and-reflection-studies-at-esmo-congress-2025-and-edcc" target="_blank" rel="noopener">GRAIL ESMO 2025 数据发布（BioSpace）</a> · <a href="https://www.ainvest.com/news/grail-pathfinder-2-study-insights-multi-cancer-early-detection-2510/" target="_blank" rel="noopener">PATHFINDER 2 结果汇总</a></p>
-    </article>
-
-    <!-- 4 Holistic ends -->
+    <!-- 3 MAPs -->
     <article class="paper" data-tags="frag">
-      <div class="meta"><span class="tag">片段组学</span><span>Cell Genomics · 2026 年 3 月</span><span>同行评议</span></div>
-      <h3>cfDNA 的「另一端」：3′ 末端与双链四末端测序打开 end-motif 的盲区
-        <span class="en">Holistic determination of ends of cfDNA molecules — Jiang, Ma, Qiao et al.（Lo &amp; Chan 团队）</span></h3>
-      <p class="one-liner">以往 end-motif 研究几乎只看 5′ 端——因为常规建库会人为修饰 3′ 端。该研究用单链建库「2-end sequencing」同时读取天然 5′ 与 3′ 末端，并提出 pre-end / post-end 基序与基于 3′ 末端的 FRAGMA 甲基化分析。</p>
+      <div class="meta"><span class="tag">片段组学与核小体</span><span class="tag warn">预印本 · 未同行评议</span><span>bioRxiv · 2026 年 10 月 28 日上线</span><span>Dana-Farber · Ou 等</span></div>
+      <h3>MAPs：组蛋白修饰给 cfDNA 中的核小体「重新标位」
+        <span class="en">Ou et al. · Dana-Farber Cancer Institute · bioRxiv preprint, 2026</span></h3>
+      <p class="one-liner">cfChIP-seq 发现 35,120 个 MAPs——带活性或抑制性组蛋白标记的核小体在 cfDNA 中占据可重复偏移的位置；仅 50 个 MAP 位点、不足 0.001% 基因组的片段，即可以 AUC 0.91–0.96 区分肿瘤分数 ≥3% 与 0%。</p>
       <div class="kpi-row">
-        <div class="kpi"><b>AUC 0.95</b><span>多类末端基序联合检测肝细胞癌（HCC）</span></div>
-        <div class="kpi"><b>AUC 0.97</b><span>3′ FRAGMA（3′ 末端片段组学甲基化分析）</span></div>
-        <div class="kpi"><b>4-end</b><span>双链两股四末端联合测序策略</span></div>
+        <div class="kpi"><b>35,120</b><span>个 MAPs 位点（cfChIP-seq 发现）</span></div>
+        <div class="kpi"><b>2,535</b><span>个 cfDNA 测序数据集纳入分析</span></div>
+        <div class="kpi"><b>50 个位点</b><span>50-MAP 模型，不足 0.001% 基因组</span></div>
+        <div class="kpi"><b>0.91–0.96</b><span>区分肿瘤分数 ≥3% 与 0% 的 AUC（前列腺 / 乳腺 / 肺癌）</span></div>
       </div>
       <details>
         <summary>五段拆解</summary>
         <div class="breakdown">
-          <div><h4>① 核心方法</h4><p>单链文库制备避免 3′ 端的人为修饰，原生读取 EM5 与 EM3 两类末端基序，并定义紧邻切口上下游的 PREMs 与 POEMs；进而开发 3′ FRAGMA 与可 interrogate 双链四末端的 4-end sequencing。</p></div>
-          <div><h4>② 样本与验证设计</h4><p>以肝细胞癌为验证场景的病例-对照设计（作者报告）；队列规模与构成见原文。属方法学 + 概念验证阶段，尚非筛查人群前瞻验证。</p></div>
-          <div><h4>③ 关键结果</h4><p>作者报告：多类末端标记联合对 HCC 的 AUC 达 0.95；3′ FRAGMA 进一步提升至 0.97；4-end 测序可再增强基于片段组学的癌症检出。</p></div>
-          <div><h4>④ 相对增量</h4><p>把 end-motif 的信息量近乎翻倍：3′ 端、切口邻近基序与末端甲基化都是此前被协议「吃掉」的信号，为 DELFI 类仅用长度 / 覆盖度的模型提供了正交特征来源。</p></div>
-          <div><h4>⑤ 最值得借鉴</h4><p>「协议即偏倚来源」的范例：当某个信号长期缺席，先问是不是建库方法把它抹掉了——这一问法适用于所有组学特征工程。</p></div>
-          <div class="risk"><h4>风险提示（本站判断）</h4><p>单癌种、病例-对照设计，AUC 易受谱偏倚影响而高估；单链建库成本与通量、跨实验室可重复性尚待验证；4-end 策略的增量需在独立队列中确认。</p></div>
+          <div><h4>① 核心方法</h4><p>在前列腺癌患者血浆中做 cfChIP-seq，寻找带活性（H3K4me2）与抑制性（H3K9me3）组蛋白标记、且在 cfDNA 中占据可重复偏移位置的核小体，即 MAPs（修饰相关定位）；汇总分析 2,535 个 cfDNA 测序数据集，并把 50-MAP 模型放到靶向测序 panel 中验证。</p></div>
+          <div><h4>② 样本与验证设计</h4><p>以前列腺癌 cfChIP-seq 发现位点，模型在前列腺、乳腺、肺癌中评估区分肿瘤分数 ≥3% 与 0% 的能力，并在靶向 panel 中复现（作者报告）；摘要未给出训练 / 验证划分细节。</p></div>
+          <div><h4>③ 关键结果</h4><p>作者报告：50-MAP 模型 AUC 0.91–0.96，优于现有片段组学肿瘤分数预测器；MAP 估计值与参考肿瘤分数 r=0.89、与纵向变化 r=0.91；ASCL1 位点的 MAP 信号可从 cfDNA 识别前列腺癌的神经内分泌转化。</p></div>
+          <div><h4>④ 相对增量</h4><p>把核小体定位从「片段断裂模式」推进到「组蛋白修饰维度」：位置信息由表观标记定义，50 个位点即可估计肿瘤分数，为超低 panel 成本的肿瘤分数定量与监测提供了新路线。</p></div>
+          <div><h4>⑤ 最值得借鉴</h4><p>用 cfChIP 定义的生物学位置替代纯统计特征筛选；以及把肿瘤分数估计与谱系转化（神经内分泌转化）放进同一信号框架——同一组位点既定量又定性。</p></div>
+          <div class="risk"><h4>风险提示（本站判断）</h4><p>摘要未给出各癌种单独 AUC、固定特异性下灵敏度、置信区间与训练 / 验证划分细节，数字暂按作者报告引用；通讯作者 Baca、Freedman 为 Precede Biosciences 联合创始人 / 股东（摘要已声明利益冲突）。预印本，未同行评议。</p></div>
         </div>
       </details>
-      <p class="src">来源：<a href="https://pubmed.ncbi.nlm.nih.gov/41653917/" target="_blank" rel="noopener">PubMed 记录（Cell Genomics 2026;6(3):101142）</a></p>
+      <p class="src">来源：<a href="https://www.biorxiv.org/content/10.64898/2026.10.26.761423v1" target="_blank" rel="noopener">bioRxiv 预印本全文</a></p>
     </article>
 
-    <!-- 5 Renal -->
-    <article class="paper" data-tags="frag">
-      <div class="meta"><span class="tag">片段组学</span><span>Molecular Biomedicine · 2026 年 9 月</span><span>同行评议</span></div>
-      <h3>不止于「有没有癌」：片段组学分类器鉴别肾肿块良恶性
-        <span class="en">A cfDNA fragmentomics classifier for noninvasive differentiation of benign and malignant renal masses — Li, Wang et al.</span></h3>
-      <p class="one-liner">把低深度 WGS 的三类特征——拷贝数变异（CNV）、FRAGMA 甲基化与核小体足迹——集成建模，目标不是筛查，而是影像学难以定性的肾肿块分诊：哪些可以避免不必要的切除。</p>
+    <!-- 4 多癌种超深靶向验证 -->
+    <article class="paper" data-tags="clinic">
+      <div class="meta"><span class="tag">临床验证</span><span class="tag warn">预印本 · 未同行评议</span><span>Preprints.org · 2026 年 10 月 28 日发布</span><span>Tan 等</span></div>
+      <h3>4,662 例验证：多癌种超深靶向 cfDNA 测序总体灵敏度 88.6%
+        <span class="en">Tan et al. · Preprints.org preprint, 2026</span></h3>
+      <p class="one-liner">定制杂交捕获 panel + 唯一分子标识符 + 超深度测序，在 19 种癌症、4,662 例存档血浆中给出总体灵敏度 88.6%、特异度 99.2%；I 期灵敏度 74.3%，六个癌种的早期（I–II 期）合并灵敏度超过 80%。</p>
       <div class="kpi-row">
-        <div class="kpi"><b>331 人</b><span>训练集（癌 171 / 良性 160）</span></div>
-        <div class="kpi"><b>144 人</b><span>独立验证集（癌 73 / 良性 71）</span></div>
-        <div class="kpi"><b>AUC 0.946</b><span>验证集（训练集 0.956）</span></div>
-        <div class="kpi"><b>特异性 0.87</b><span>验证集，固定敏感度 90% 时</span></div>
+        <div class="kpi"><b>4,662 例</b><span>癌症 2,667 + 无癌对照 1,995，覆盖 19 种癌症</span></div>
+        <div class="kpi"><b>88.6% / 99.2%</b><span>总体灵敏度 / 特异度</span></div>
+        <div class="kpi"><b>74.3%</b><span>I 期灵敏度（IV 期 98.7%）</span></div>
+        <div class="kpi"><b>15 / 19</b><span>灵敏度超 80% 的癌种数（10 种达 90% 及以上）</span></div>
       </div>
       <details>
         <summary>五段拆解</summary>
         <div class="breakdown">
-          <div><h4>① 核心方法</h4><p>低深度全基因组测序一次提取 CNV、FRAGMA 与核小体足迹三类片段组学特征，集成学习构建良恶性分类器，并与单特征模型比较。</p></div>
-          <div><h4>② 样本与验证设计</h4><p>训练 331 人、独立验证 144 人，病例与良性对照近 1:1；针对临床真实难题（影像不确定肿块）设计，而非健康人筛查场景。</p></div>
-          <div><h4>③ 关键结果</h4><p>作者报告：验证集 AUC 0.946，优于任一单特征模型；在敏感度 90% 的预设阈值下验证集特异性 0.87；对 &gt;4 cm 良性肿块正确识别 85.3%，对 ≤4 cm 恶性肿瘤正确识别 84.6%。</p></div>
-          <div><h4>④ 相对增量</h4><p>展示了片段组学在「分诊 / 避免过度治疗」场景的价值——评价标准是减少不必要手术，而非追求筛查级特异性，拓展了液体活检的临床定位。</p></div>
-          <div><h4>⑤ 最值得借鉴</h4><p>按临床决策节点（切还是不切）反推阈值与报告指标的做法：先固定临床可接受的敏感度，再报告特异性，比单报 AUC 更贴近使用场景。</p></div>
-          <div class="risk"><h4>风险提示（本站判断）</h4><p>单中心、回顾性色彩较浓，良恶性比例远高于真实门诊患病率，PPV 不可直接外推；需多中心前瞻验证，并证明分类结果能实际改变手术决策与结局。</p></div>
+          <div><h4>① 核心方法</h4><p>定制杂交捕获 NGS panel 结合唯一分子标识符（UMI）与超深度测序，对血浆 cfDNA 做多癌种检出，以 UMI 压低测序错误、支撑高深度下的低频信号判读。</p></div>
+          <div><h4>② 样本与验证设计</h4><p>回顾性病例对照，2022–2025 年存档血浆 4,662 例：2,667 例经组织学确诊、未经治疗的恶性肿瘤 + 1,995 例无癌对照，覆盖 19 种癌症。</p></div>
+          <div><h4>③ 关键结果</h4><p>作者报告：总体灵敏度 88.6%（95% CI 87.4–89.8%）、特异度 99.2%（98.8–99.5%）、准确度 93.2%；15/19 种癌症灵敏度超 80%，10/19 达 90% 及以上；按分期：I 期 74.3%、II 期 85.4%、III 期 96.2%、IV 期 98.7%；乳腺、结直肠、胃、肝、卵巢、胰腺的早期（I–II 期）合并灵敏度超 80%，高于相应常规血清肿瘤标志物。</p></div>
+          <div><h4>④ 相对增量</h4><p>在单一研究内以近 4,700 例规模给出 19 个癌种的统一口径性能，尤其是 I 期 74.3% 与六癌种早期合并灵敏度 &gt;80%，为超深靶向路线设定了新的病例-对照基线。</p></div>
+          <div><h4>⑤ 最值得借鉴</h4><p>以「分期 × 癌种」交叉报告灵敏度、并与常规血清肿瘤标志物同队列对比的呈现方式——比单一总体数字更能定位一项技术的真实适用人群。</p></div>
+          <div class="risk"><h4>风险提示（本站判断）</h4><p>摘要未提供 AUROC 与组织溯源准确率；回顾性存档样本、无前瞻性验证，病例-对照性能在真实筛查人群中通常明显下降；作者自述需在目标筛查人群中前瞻性验证。预印本，未同行评议。</p></div>
         </div>
       </details>
-      <p class="src">来源：<a href="https://pubmed.ncbi.nlm.nih.gov/42704571/" target="_blank" rel="noopener">PubMed 记录（Mol Biomed 2026;7:163）</a></p>
+      <p class="src">来源：<a href="https://www.preprints.org/manuscript/202610.2798" target="_blank" rel="noopener">Preprints.org 预印本全文</a></p>
     </article>
 
-    <!-- 6 LIME-seq -->
-    <article class="paper" data-tags="rna">
-      <div class="meta"><span class="tag">cfRNA 与新分析物</span><span>Nature Biotechnology · 2025 年 7 月</span><span>同行评议</span></div>
-      <h3>LIME-seq：不看 DNA，看微生物 cfRNA 的「修饰」来早筛结直肠癌
-        <span class="en">Modifications of microbiome-derived cell-free RNA in plasma discriminates colorectal cancer samples — Univ. of Chicago, He 团队</span></h3>
-      <p class="one-liner">早期肿瘤凋亡少、ctDNA 稀缺，那就换一种分析物：肠道微生物来源的游离 RNA 其化学修饰模式随宿主状态改变。LIME-seq 读取这些修饰而非丰度，在独立队列中保持高判别力。</p>
+    <!-- 5 myESCAP -->
+    <article class="paper" data-tags="clinic meth">
+      <div class="meta"><span class="tag">临床验证</span><span class="tag">甲基化 / 多模态</span><span>Journal of Advanced Research · 2026 年 10 月 30 日在线</span><span>同行评议</span></div>
+      <h3>myESCAP：11 个甲基化标志物的 PCR 检测，多中心验证食管癌
+        <span class="en">myESCAP · Journal of Advanced Research, 2026</span></h3>
+      <p class="one-liner">基于 11 个食管癌特异性甲基化标志物的甲基化特异性 PCR，在 1,044 例多中心队列中验证集 AUC 0.823、灵敏度 75.59%、特异度 89%——但 I 期灵敏度仅 47.2%，且特异度离人群筛查门槛尚远。</p>
       <div class="kpi-row">
-        <div class="kpi"><b>AUC 0.98</b><span>留一交叉验证（对照：仅丰度模型 0.77）</span></div>
-        <div class="kpi"><b>0.89 / 0.93</b><span>两个独立队列的验证 AUC</span></div>
-        <div class="kpi"><b>腺瘤 + I 期</b><span>可与非癌对照区分（作者报告）</span></div>
+        <div class="kpi"><b>1,044 例</b><span>多中心队列：食管癌 489 + 非恶性对照 555</span></div>
+        <div class="kpi"><b>0.823</b><span>验证集平均 AUC</span></div>
+        <div class="kpi"><b>75.59% / 89%</b><span>验证集平均灵敏度 / 特异度</span></div>
+        <div class="kpi"><b>47.2%</b><span>I 期平均灵敏度——早期检测仍是短板</span></div>
       </div>
       <details>
         <summary>五段拆解</summary>
         <div class="breakdown">
-          <div><h4>① 核心方法</h4><p>LIME-seq 检测血浆中微生物来源 cfRNA 的化学修饰谱，用修饰模式（而非微生物丰度）构建结直肠癌判别模型，并以 SHAP 分析定位关键微生物贡献者。</p></div>
-          <div><h4>② 样本与验证设计</h4><p>病例-对照设计，含留一交叉验证、自助法与 k 折交叉验证，并设两个独立队列验证；另在胰腺癌样本上做了初步外推测试。</p></div>
-          <div><h4>③ 关键结果</h4><p>作者报告：修饰模型 AUC 0.98（留一法）、严格验证框架下约 0.92，独立队列 0.89 与 0.93；显著优于仅用丰度的模型（0.77）。媒体报道的「95% 准确率」为整体口径，引用时应回到原文指标。</p></div>
-          <div><h4>④ 相对增量</h4><p>第一次把「RNA 修饰」作为液体活检标志物类别：它绕开了早期肿瘤 ctDNA 释放不足的物理瓶颈，信号来自宿主-微生物互作的系统性改变。</p></div>
-          <div><h4>⑤ 最值得借鉴</h4><p>当直接信号（肿瘤 DNA）太弱时，寻找被放大的间接信号（微生物修饰、免疫特征）的研究策略；以及用 SHAP 做特征归因以便生物学解释的做法。</p></div>
-          <div class="risk"><h4>风险提示（本站判断）</h4><p>微生物信号易受饮食、抗生素、地域与采样批次影响，跨人群泛化风险高；病例-对照 AUC 在真实筛查患病率下 PPV 会大幅下降；需前瞻筛查队列验证。</p></div>
+          <div><h4>① 核心方法</h4><p>基于 11 个食管癌特异性甲基化标志物的甲基化特异性 PCR（myESCAP），以 6 种机器学习模型建模判读，把甲基化检测从测序平台下放到 PCR。</p></div>
+          <div><h4>② 样本与验证设计</h4><p>多中心回顾性病例对照 1,044 例：食管癌 489 例（鳞癌 416 例，占 85.07%；I 期 93 例）+ 非恶性对照 555 例（含良性食管 / 胃疾病与无症状者）；训练集 347 例癌 + 349 例对照，验证集 142 例癌 + 206 例对照。</p></div>
+          <div><h4>③ 关键结果</h4><p>作者报告：验证集平均 AUC 0.823、平均灵敏度 75.59%、平均特异度 89%；I 期平均灵敏度仅 47.2%——分期越早，漏检越严重，早期检测仍是这条路线的短板。</p></div>
+          <div><h4>④ 相对增量</h4><p>PCR 路线的成本与设备门槛远低于测序方案，适合资源有限场景；且对照组纳入良性食管 / 胃疾病，比「仅健康人对照」更接近真实分流场景的鉴别难度。</p></div>
+          <div><h4>⑤ 最值得借鉴</h4><p>对照组的构成方式（含良性疾病）与按分期如实报告 I 期灵敏度的做法；评价低成本检测时，应同时问「在哪个场景、替代哪一步」而非只问 AUC。</p></div>
+          <div class="risk"><h4>风险提示（本站判断）</h4><p>特异度约 89–91% 远低于人群筛查所需的 99% 以上，价值在高危人群分流而非普筛；I 期灵敏度 47.2% 意味着早期病例漏检过半；尚无前瞻性验证。</p></div>
         </div>
       </details>
-      <p class="src">来源：<a href="https://medicalxpress.com/news/2025-07-liquid-biopsy-rna-modifications-early.html" target="_blank" rel="noopener">研究报道（Medical Xpress，含 DOI 10.1038/s41587-025-02731-8）</a></p>
+      <p class="src">来源：<a href="https://doi.org/10.1016/j.jare.2026.10.048" target="_blank" rel="noopener">Journal of Advanced Research 原文（DOI 10.1016/j.jare.2026.10.048）</a></p>
     </article>
 
-    <!-- 7 GC Genome -->
-    <article class="paper" data-tags="frag clinic">
-      <div class="meta"><span class="tag">片段组学</span><span class="tag">临床验证</span><span>American Journal of Gastroenterology · 2025 年 11 月</span><span>同行评议（经新闻稿）</span></div>
-      <h3>ai-CANCERCH：低深度 WGS 片段组学做结直肠癌筛查，I 期敏感度 84.2%
-        <span class="en">GC Genome / Asan Medical Center — blood-based colorectal cancer screening study</span></h3>
-      <p class="one-liner">韩国 GC Genome 与峨山医院的 1,677 人研究：10 mL 血、低覆盖度 WGS 加自研 AI 片段组学算法，结直肠癌敏感度 90.4%，对肠镜正常者特异性 94.7%，并对进展期腺瘤有 58.3% 的检出。</p>
+    <!-- 6 Abbott Oncodetect -->
+    <article class="paper" data-tags="mrd">
+      <div class="meta"><span class="tag">MRD 与产业动态</span><span class="tag warn">厂商发布 · 非同行评议论文</span><span>行业新闻 · 2026 年 10 月 26 日</span></div>
+      <h3>Abbott 新一代 Oncodetect 上市：全基因组 + MAESTRO，追踪 5,000 个患者特异变异
+        <span class="en">Oncodetect MRD (MAESTRO) · Abbott / Broad Institute, 2026</span></h3>
+      <p class="one-liner">肿瘤知情全基因组 MRD 检测上市：Broad 开发的 MAESTRO 技术把血中肿瘤 DNA 富集高达 1,000 倍，可追踪的患者特异变异从第一代最多 200 个扩至 5,000 个，厂商称检测限 &lt;1 ppm。注意：这是治疗后监测，不是早筛。</p>
       <div class="kpi-row">
-        <div class="kpi"><b>1,677</b><span>总入组（CRC 302、进展期腺瘤 108 等）</span></div>
-        <div class="kpi"><b>90.4%</b><span>CRC 总敏感度</span></div>
-        <div class="kpi"><b>84.2%</b><span>I 期 CRC 敏感度（II 期 85.0%）</span></div>
-        <div class="kpi"><b>94.7%</b><span>特异性（肠镜正常人群）</span></div>
+        <div class="kpi"><b>5,000 个</b><span>患者特异变异追踪上限（第一代最多 200 个）</span></div>
+        <div class="kpi"><b>1,000×</b><span>MAESTRO 对血中肿瘤 DNA 的富集倍数（厂商口径）</span></div>
+        <div class="kpi"><b>&lt;1 ppm</b><span>高投入量下检测限，较第一代改善 30 倍（厂商口径）</span></div>
+        <div class="kpi"><b>&gt;99%</b><span>分析特异性（厂商口径）</span></div>
       </div>
       <details>
         <summary>五段拆解</summary>
         <div class="breakdown">
-          <div><h4>① 核心方法</h4><p>低覆盖度全基因组测序（Lc-WGS）提取 cfDNA 片段组学特征，自研 AI 算法判读；该平台即其 MCED 产品 ai-CANCERCH 的技术基础，2026 年 1 月计划把可检癌种从 6 种扩至 10 种。</p></div>
-          <div><h4>② 样本与验证设计</h4><p>1,677 人，含 302 例 CRC、108 例进展期腺瘤及肠镜对照；以肠镜为参照标准，是单癌种筛查场景的临床性能研究。</p></div>
-          <div><h4>③ 关键结果</h4><p>发布方报告：CRC 敏感度 90.4%，分期敏感度 I–IV 期分别为 84.2%、85.0%、94.4%、100%；T1N0 可内镜切除病灶敏感度 90.0%；进展期腺瘤 58.3%。</p></div>
-          <div><h4>④ 相对增量</h4><p>相对已获批的血液 CRC 筛查（如 Shield），其 I 期与癌前病变（腺瘤）检出明显更高，若属实，将改变「血液筛查只适合不愿做肠镜者」的定位。</p></div>
-          <div><h4>⑤ 最值得借鉴</h4><p>以肠镜为金标准、把腺瘤检出单列报告的评价框架：CRC 筛查的价值一半在癌前病变，这个口径值得所有单癌种血液筛查研究采用。</p></div>
-          <div class="risk"><h4>风险提示（本站判断）</h4><p>本条信息目前主要来自厂商新闻稿，病例富集程度、阈值设定与验证集独立性需等原文细读；94.7% 特异性低于 MCED 常用的 99% 量级，在低患病率人群中假阳性负担需测算。</p></div>
+          <div><h4>① 核心方法</h4><p>肿瘤知情（tumor-informed）全基因组测序 MRD 检测：先由肿瘤组织确定患者特异变异谱，再在血浆中追踪；Broad 开发的 MAESTRO 技术在测序前把血中肿瘤 DNA 富集高达 1,000 倍，使可追踪变异数从第一代最多 200 个扩至 5,000 个。</p></div>
+          <div><h4>② 样本与验证设计</h4><p>本次为产品上市发布，无同行评议临床验证论文同步发表；厂商称 20 余项实体瘤研究正在评估该检测，性能数字均为厂商口径。</p></div>
+          <div><h4>③ 关键结果</h4><p>厂商报告：分析特异性 &gt;99%，高投入量下检测限 &lt;1 ppm，较第一代改善 30 倍；追踪变异规模扩大 25 倍（200 → 5,000）。</p></div>
+          <div><h4>④ 相对增量</h4><p>把肿瘤知情 MRD 的追踪广度推到全基因组尺度：可追踪变异越多，低肿瘤分数下的抽样噪声越小——这是当前 MRD 灵敏度竞争的主战场之一。</p></div>
+          <div><h4>⑤ 最值得借鉴</h4><p>「富集优先于堆深度」的工程路线：先提高肿瘤 DNA 在文库中的占比，再谈测序深度与成本，对任何做超低频检测的团队都有参考价值。</p></div>
+          <div class="risk"><h4>风险提示（本站判断）</h4><p>属 MRD（治疗后监测）范畴而非泛癌早筛；未经 FDA 批准 / 许可；性能数字均为厂商口径，无同行评议临床验证论文随上市同步发表，引用时须标注来源性质。</p></div>
         </div>
       </details>
-      <p class="src">来源：<a href="https://www.ariva.de/news/gc-genome-publishes-blood-based-colorectal-cancer-screening-11831737" target="_blank" rel="noopener">GC Genome 研究发布（PR Newswire，2025 年 11 月 27 日）</a></p>
+      <p class="src">来源：<a href="https://abbott.mediaroom.com/2026-10-26-Abbott-launches-whole-genome-sequencing-Oncodetect-R-molecular-residual-disease-MRD-test-to-detect-traces-of-cancer-during-and-after-treatment" target="_blank" rel="noopener">Abbott 上市新闻稿</a> · <a href="https://www.broadinstitute.org/news/Broad-Abbott-ultra-sensitive-blood-test-for-cancer-DNA" target="_blank" rel="noopener">Broad Institute 新闻稿</a></p>
     </article>
 
-    <!-- 8 Meta-analysis -->
-    <article class="paper" data-tags="frag meth">
-      <div class="meta"><span class="tag">甲基化 / 多模态</span><span class="tag">片段组学</span><span>European Journal of Cancer · 2026 年</span><span>系统综述与荟萃分析</span></div>
-      <h3>109 项研究的荟萃分析：片段组学敏感度最高，集成与神经网络模型领先
-        <span class="en">Integrating liquid biopsies and artificial intelligence for early cancer detection: a systematic review and meta-analysis</span></h3>
-      <p class="one-liner">汇总 109 项「机器学习 + cfDNA」早期检出研究：特异性普遍在 94%–99%，I 期敏感度跨度极大（44%–91%）；按特征分层，片段组学敏感度 86%，高于甲基化的 81%。</p>
-      <div class="kpi-row">
-        <div class="kpi"><b>109 项</b><span>纳入研究，覆盖 10 余个癌种</span></div>
-        <div class="kpi"><b>86%</b><span>片段组学特征的合并敏感度（95%CI 80–90%）</span></div>
-        <div class="kpi"><b>81%</b><span>甲基化特征的合并敏感度（95%CI 76–85%）</span></div>
-        <div class="kpi"><b>44–91%</b><span>I 期敏感度区间——分期越早，分歧越大</span></div>
-      </div>
-      <details>
-        <summary>五段拆解</summary>
-        <div class="breakdown">
-          <div><h4>① 核心方法</h4><p>系统检索 Medline、Embase、Cochrane 与 Web of Science（截至 2025 年 7 月），纳入结合机器学习与 cfDNA 特征区分 I–III 期癌症与非癌对照的研究，按癌种、算法与特征类型分层合并。</p></div>
-          <div><h4>② 样本与验证设计</h4><p>肺癌（34 项）、肝癌（29 项）、结直肠癌（28 项）研究最多，另有 27 项多癌种研究；绝大多数为病例-对照设计。</p></div>
-          <div><h4>③ 关键结果</h4><p>作者报告：神经网络合并敏感度 90%、随机森林 86%、异质集成 85% 居前；各癌种 / 分期特异性维持 94%–99%；I–III 期敏感度 72%–92%。</p></div>
-          <div><h4>④ 相对增量</h4><p>给「哪类特征、哪类算法更好」提供了跨研究的量化参照，尤其是片段组学在敏感度上的领先与多模态集成的稳定性，为新研究设定了应超越的基线。</p></div>
-          <div><h4>⑤ 最值得借鉴</h4><p>分层报告的方式：按分期、特征与算法交叉分层，比单一合并值有用得多；做新模型时应至少在这三个维度上与本文数字对标。</p></div>
-          <div class="risk"><h4>风险提示（本站判断）</h4><p>纳入研究以病例-对照为主，合并值系统性高估真实筛查性能；研究间异质性（建库、阈值、人群）大，发表偏倚不可排除——本文更适合看「相对排序」，不宜引用绝对值做临床推断。</p></div>
-        </div>
-      </details>
-      <p class="src">来源：<a href="https://visualize.jove.com/41930854" target="_blank" rel="noopener">JoVE Visualize 条目（European Journal of Cancer）</a></p>
-    </article>
   </section>
 
   <!-- ================= TOP 3 ================= -->
@@ -555,21 +506,22 @@
     </div>
     <div class="top3">
       <div class="pick">
-        <span class="rank">No.1 — 方法学必读</span>
-        <h3>FAME（Genome Medicine, 2026）</h3>
-        <p>它先审计信号、再建模的顺序，纠正了多模态融合研究最常见的默认假设。任何计划从甲基化文库提取片段特征的团队，这篇的特征保真度结果都是设计实验前的前置阅读。</p>
+        <span class="rank">No.1 — 测量保真必读</span>
+        <h3>JEEPERS（Nature Methods, 2026）</h3>
+        <p>所有做 cfDNA 甲基化测序的管线都应先读：它揭示并可校正一个系统性测量偏倚，9× 深度即可起效，直接影响既往甲基化数据的可信度。</p>
       </div>
       <div class="pick">
-        <span class="rank">No.2 — 证据等级必读</span>
-        <h3>NHS-Galleri 随机对照试验（2026）</h3>
-        <p>领域第一个人群结局 RCT 且主要终点阴性。读它不是为了唱衰 MCED，而是理解「检出率证据」与「临床效用证据」之间的鸿沟，以及终点合并方式如何决定结论。</p>
+        <span class="rank">No.2 — 方法论必读</span>
+        <h3>ctDNA-BERT（bioRxiv 预印本，2026）</h3>
+        <p>方法论上最有启发：异种移植提供分子级监督、读段级评分层与样本级推断解耦，I 期 AUROC 0.884 且跨队列免重训；但须带着「回顾性、无良性对照、肺与甲状腺主导队列」的清醒去读。</p>
       </div>
       <div class="pick">
-        <span class="rank">No.3 — 信号创新必读</span>
-        <h3>Holistic ends（Cell Genomics, 2026）</h3>
-        <p>3′ 末端与四末端测序把 end-motif 的可用信息近乎翻倍，且直接源于对建库伪影的追问。片段组学特征工程的下一个增量，很可能就藏在这类「被协议吃掉」的信号里。</p>
+        <span class="rank">No.3 — 信号维度必读</span>
+        <h3>MAPs（bioRxiv 预印本，2026）</h3>
+        <p>把核小体定位从片段组学推进到组蛋白修饰维度，50 个位点、不足 0.001% 基因组即可估计肿瘤分数，AUC 0.91–0.96；且能从 cfDNA 识别前列腺癌神经内分泌转化。</p>
       </div>
     </div>
+
   </section>
 
   <!-- ================= BACKGROUND ================= -->
@@ -594,7 +546,7 @@
           <div class="step"><b>模型判读</b><span>多特征模型输出癌症信号有无 + 信号来源（TOO/CSO）</span></div>
           <div class="step"><b>诊断确认</b><span>阳性者按预测来源做影像 / 内镜等确诊检查</span></div>
         </div>
-        <p>注意中间一步：<b>建库化学会改变信号本身</b>——这正是本期 FAME 研究的主题。比较不同研究时，先看这一步是否可比。</p>
+        <p>注意中间一步：<b>建库化学会改变信号本身</b>——这正是上期 FAME 研究的主题。比较不同研究时，先看这一步是否可比。</p>
       </div>
     </div>
 
@@ -672,6 +624,24 @@
         <p class="src">来源：<a href="https://doi.org/10.1200/JCO.2012.45.2011" target="_blank" rel="noopener">DOI 10.1200/JCO.2012.45.2011</a> · Liquid biopsies: genotyping circulating tumor DNA</p>
       </div>
       <div class="tl-item">
+        <span class="year">2015 · 01</span>
+        <h3>染色体不稳定性：血清 cfDNA 的拷贝数变异可区分前列腺癌（Schütz et al., Clinical Chemistry）</h3>
+        <p><b>发表时间与期刊：</b>2015 年 1 月 1 日，<i>Clinical Chemistry</i> 61(1):239–248。<b>核心方法：</b>对血清 cfDNA 做大规模平行测序（SOLiD 平台），随机引物扩增并加分子标签；以 100-kb 滑动窗口统计各区段比对读段数相对对照的偏离，筛出染色体不稳定性区域用于分类。<b>关键结果：</b>队列为 204 例前列腺癌（Gleason 评分 2–10）、207 名男性对照，另有良性前列腺增生 10 例与前列腺炎 10 例。先在一个子集（n=177）上仅用比对命中数变异评估，AUC 0.81（95% CI 0.7–0.9）；用全部数据经 5 轮 10 折交叉验证建立的最终模型区分前列腺癌与对照，AUC 0.92（95% CI 0.87–0.95），诊断准确率 83%；良性增生与前列腺炎和前列腺癌的区分准确率达 90%。<b>为什么是经典：</b>它最早证明：不需要靶向已知突变，仅凭 cfDNA 的全基因组拷贝数不稳定性信号就能做癌症分类——把液体活检从「找已知突变」扩展到「读基因组不稳定性」，也是后来低深度 WGS 拷贝数 / 片段组学路线的早期先例；同时它纳入良性疾病对照，直面了前列腺癌筛查最现实的混杂。</p>
+        <p class="src">来源：<a href="https://doi.org/10.1373/clinchem.2014.226571" target="_blank" rel="noopener">DOI 10.1373/clinchem.2014.226571</a> · <a href="https://academic.oup.com/clinchem/article/61/1/239/5611433" target="_blank" rel="noopener">Clinical Chemistry 原文</a> · Chromosomal Instability in Cell-Free DNA Is a Serum Biomarker for Prostate Cancer</p>
+      </div>
+      <div class="tl-item">
+        <span class="year">2015 · 03</span>
+        <h3>血浆 DNA 的「变长又变短」：肝癌中肿瘤来源片段的双向大小偏移（Jiang et al., PNAS）</h3>
+        <p><b>发表时间与期刊：</b>2015 年 3 月 17 日，<i>Proceedings of the National Academy of Sciences</i> 112(11):E1317–E1325（2 月 2 日在线发表）。<b>核心方法：</b>大规模平行测序，以单碱基分辨率全基因组测量血浆 DNA 片段大小；用染色体臂水平 z 值分析（CAZA）识别肿瘤来源的血浆 DNA，再单独分析其大小谱。<b>关键结果：</b>队列为 90 例肝细胞癌、67 例慢性乙型肝炎、36 例乙肝相关肝硬化与 32 名健康对照。肝癌患者血浆中同时存在异常偏短与偏长的 DNA 分子群体，其中偏短片段更倾向携带肿瘤相关的拷贝数异常；肝癌患者血浆线粒体 DNA 含量升高，且远短于核 DNA。<b>为什么是经典：</b>它调和了当时相互矛盾的报道——肿瘤 DNA 有时显得更长、有时更短——证明两种偏移同时存在且对应不同分子群体；单碱基分辨率的全基因组大小谱与 CAZA 识别肿瘤片段的方法，成为后来片段组学（大小选择、片段富集、组织溯源）的直接方法学源头。</p>
+        <p class="src">来源：<a href="https://doi.org/10.1073/pnas.1500076112" target="_blank" rel="noopener">DOI 10.1073/pnas.1500076112</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/25646427/" target="_blank" rel="noopener">PubMed PMID 25646427</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4372002/" target="_blank" rel="noopener">PMC 全文 PMC4372002</a> · Lengthening and shortening of plasma DNA in hepatocellular carcinoma patients</p>
+      </div>
+      <div class="tl-item">
+        <span class="year">2015 · 07</span>
+        <h3>cfDNA 总量升高来自肿瘤还是炎症？肺癌与慢性肺部炎症的对照（Szpechcinski et al., British Journal of Cancer）</h3>
+        <p><b>发表时间与期刊：</b>2015 年 6 月 30 日，<i>British Journal of Cancer</i> 113(3):476–483。<b>核心方法：</b>实时定量 PCR 测定血浆 cfDNA 浓度，比较可切除非小细胞肺癌、慢性呼吸道炎症与健康对照三组。<b>关键结果：</b>队列为 50 例可切除 NSCLC（I–IIIA 期）、101 例慢性呼吸道炎症（慢性阻塞性肺病、结节病或哮喘）与 40 名健康志愿者。NSCLC 组血浆 cfDNA 显著高于炎症组与健康组（P&lt;0.0001），而炎症组与健康组之间无显著差异。以 42.8 ng/mL 为界，区分 NSCLC 与健康人的灵敏度 90%、特异度 80.5%（AUC 0.90）；但区分 NSCLC 与慢性炎症时，45.25 ng/mL 界值下灵敏度仅 56%、特异度 91%（AUC 0.76）。<b>为什么是经典：</b>它用炎症对照回答了一个早筛必须回答的问题：cfDNA 升高究竟是肿瘤信号还是炎症副产物——答案是肿瘤驱动，但总量本身对炎症的区分力有限（AUC 0.76）。这一结论预示了领域后来的转向：从「测 cfDNA 有多少」走向「读肿瘤特异的突变、甲基化与片段特征」。</p>
+        <p class="src">来源：<a href="https://doi.org/10.1038/bjc.2015.225" target="_blank" rel="noopener">DOI 10.1038/bjc.2015.225</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4522634/" target="_blank" rel="noopener">PMC 全文 PMC4522634</a> · Cell-free DNA levels in plasma of patients with non-small-cell lung cancer and inflammatory lung disease</p>
+      </div>
+      <div class="tl-item">
         <span class="year">2016 · 01</span>
         <h3>核小体足迹与组织溯源：不靠基因差异读出来源组织（Snyder et al., Cell）</h3>
         <p><b>发表时间与期刊：</b>2016 年 1 月 14 日，<i>Cell</i> 164(1–2):57–68；作者为华盛顿大学基因组科学系的 Snyder、Kircher、Hill、Daza 与 Shendure。<b>核心方法：</b>对血浆 cfDNA 做深度测序，由片段端点分布构建全基因组体内核小体占据图谱，并提出窗口保护分数（WPS）量化核小体保护；通过优化建库回收短片段，还能直接读出 CTCF 等转录因子在 DNA 上的足迹；再把调控元件与基因体内的核小体间距与各细胞类型的 DNase 超敏位点和基因表达谱比对，反推 cfDNA 的贡献细胞类型。<b>关键结果：</b>cfDNA 片段长度主峰约 167 bp（对应染色质小体），核小体占据与细胞内的核结构、基因结构和表达高度相关；健康人 cfDNA 的核小体间距与淋巴系、髓系细胞的表观特征最吻合，证实健康 cfDNA 主要来自造血细胞死亡；在 5 名晚期癌症患者中，则检出了额外的非造血组织贡献，且常与患者癌症的解剖起源一致。<b>为什么是经典：</b>它证明 cfDNA 的断裂模式本身记录了来源细胞的核小体排布，无需依赖胎儿与母亲、肿瘤与正常之间的基因差异即可推断组织来源——为片段组学与「用断裂模式做 TOO」奠定了原理基础，也把液体活检的适用范围从基因分型扩展到更广泛的组织损伤监测。</p>
@@ -735,7 +705,7 @@
       </div>
       <div>
         <h4>本期说明</h4>
-        <p>本页为创刊号（2026 年 11 月 2 日），内容为建站时点的精选快照；文中数字均来自所附一手来源链接，厂商新闻稿与会议材料已在对应条目中标注。下一期将于下周一更新，覆盖其间新发表或新公开的工作，最多 8 项，宁缺毋滥。</p>
+        <p>本页为第 2 期（2026 年 11 月 2 日），覆盖 2026 年 10 月 26 日至 11 月 1 日新发表或新公开的工作，共 6 项，宁缺毋滥；文中数字均来自所附一手来源链接，预印本与厂商发布已在对应条目中标注。下一期将于下周一更新。</p>
         <p>本站内容为科研信息整理，不构成医疗建议；具体检测的临床使用请以监管批准与临床指南为准。</p>
       </div>
     </div>
@@ -747,7 +717,7 @@
   var chips = document.querySelectorAll('.chip');
   var papers = document.querySelectorAll('.paper');
   var note = document.getElementById('filterNote');
-  var names = { all:'全部', frag:'片段组学', meth:'甲基化 / 多模态', clinic:'临床验证', rna:'cfRNA 与新分析物' };
+  var names = { all:'全部', meth:'甲基化 / 多模态', frag:'片段组学与核小体', clinic:'临床验证', mrd:'MRD 与产业动态' };
   function apply(f){
     var n = 0;
     papers.forEach(function(p){
